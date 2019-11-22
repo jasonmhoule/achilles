@@ -25,10 +25,3 @@ RUN install2.r --error \
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
 ## COPY Rprofile.site /usr/local/lib/R/etc/Rprofile.site
-## Install packages from CRAN
-RUN install2.r --error \ 
-    -r 'http://cran.rstudio.com' \
-    googleAuthR \
-    && Rscript -e "devtools::install_github(c('MarkEdmondson1234/googleID')" \
-    ## clean up
-    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
