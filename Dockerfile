@@ -24,7 +24,7 @@ RUN install2.r --error \
 ## clean up
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
-COPY Rprofile.site /usr/local/lib/R/etc/Rprofile.site
+## COPY Rprofile.site /usr/local/lib/R/etc/Rprofile.site
 ## Install packages from CRAN
 RUN install2.r --error \ 
     -r 'http://cran.rstudio.com' \
